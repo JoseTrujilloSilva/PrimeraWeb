@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matricula de 0 a 6 años</title>
+  <style>
+    fieldset {
+      width: 70%;
+    }
+
+    table {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="contromentessorimadrid.php" method="POST">
+    <table>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Datos del niño</legend>
+            <table>
+              <tr>
+                <td colspan="2"><label for="nombre_niño">Nombre del niño</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="text" name="name" id="nombre_niño" size="12" required="required" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><label for="apellido_niño">Apellidos del niño</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="text" name="last_name" id="apellido_niño" size="20" required="required" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><label for="dni_niño">Dni del niño</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="text" name="dni" id="dni_niño" placeholder="Introduzca el DNI"
+                    pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" size="12"
+                    required="required" /></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p>Introduzca la edad del niño en estas dos categorías:</p>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="edad1">6 a 9 años</label>
+                  <input type="radio" name="years" id="edad1" checked="checked" />
+                </td>
+                <td><label for="edad2">9 a 12 años</label>
+                  <input type="radio" name="years" id="edad2" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><label for="Observaciones"><b>Observaciones</b></label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><textarea name="ob" id="Observaciones" cols="50" rows="10"
+                    placeholder="Aqui se anotara si su hijo tiene algun tipo de alergia o alguna información en la que el centro deba tener en cuenta."></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="reset" name="rest" id="reestablecer" value="Restablecer" /></td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <fieldset>
+            <legend>Datos de los padres o tutores del niño</legend>
+            <table>
+              <tr>
+                <td colspan="2">Nombre y apellidos de los Padres/Tutores:</td>
+              </tr>
+              <tr>
+                <td><label for="nombre_tutor1">Tutor 1 &nbsp;&nbsp;</label></td>
+                <td><input type="text" name="name" id="nombre_tutor1" size="30" required="required" /></td>
+              </tr>
+              <tr>
+                <td><label for="nombre_tutor2">Tutor 2 &nbsp;&nbsp;</label></td>
+                <td><input type="text" name="name_2" id="nombre_tutor2" size="30" /></td>
+              </tr>
+              <tr>
+                <td>Dni de los padres o tutores:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><label for="tutor1">Tutor 1 &nbsp;&nbsp;</label></td>
+                <td><input type="text" name="dnip" id="tutor1" placeholder="Introduzca el DNI"
+                    pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" size="12"
+                    required="required" /></td>
+              </tr>
+              <tr>
+                <td><label for="tutor2">Tutor 2 &nbsp;&nbsp;</label></td>
+                <td><input type="text" name="dnip" id="tutor2" placeholder="Introduzca el DNI"
+                    pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra, este campo no es obligatorio"
+                    size="12" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><label for="archivos">Documentación extra legal (documentación médica del niño u otra
+                    documentación de interés)</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="file" name="adjunto" id="archivos" /></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><input type="submit" name="send" id="enviar" />
+                  <input type="reset" name="rest" id="restablecer" value="Restablecer" />
+                </td>
+                <td><a href="../index.html">Volver a la página de inicio</a></td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
